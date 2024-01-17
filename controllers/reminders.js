@@ -54,10 +54,9 @@ async function update(req, res) {
         // options object {new: true} returns updated doc
         {new: true}
       );
-      return res.redirect(`/reminders`);
     } catch (e) {
-      console.log(e.message);
-      return res.redirect('/reminders');
+        console.log(e.message);
     }
+    return res.redirect(`/reminders`);
   }
   
