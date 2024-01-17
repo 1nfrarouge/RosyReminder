@@ -1,0 +1,11 @@
+<%- include('../partials/header') %>
+<h2>NEW REMINDER</h2>
+
+<form action="/reminders" method="POST">
+    <input name="recipient" required>
+    <input name="date" required type="date">
+    <input name="occasion" required>
+    <button type="submit">ADD REMINDER</button>
+</form>
+
+<%- include('../partials/footer') %>
