@@ -9,7 +9,7 @@
             <h4>Occasion: <%= reminder.occasion %></h4>
             <a href="/reminders/<%= reminder._id %>/edit">EDIT</a>
             <form action="/reminders/<%= reminder._id %>?_method=DELETE" method="POST">
-                <button type="submit">🗑️</button>
+                <button type="submit">DELETE</button>
               </form>
         </article>
     <% }) %>
