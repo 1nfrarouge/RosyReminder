@@ -12,6 +12,10 @@ router.get('/new', remindersCtrl.new);
 // POST /reminders (create action)
 router.post('/', remindersCtrl.create);
 // DELETE /reminders/:id	remindersCtrl.delete (delete action)
-router.delete('/:id', remindersCtrl.delete)
+router.delete('/:id', remindersCtrl.delete);
+// GET	/reminders/:id/edit	remindersCtrl.edit (edit action)
+router.get('/:id/edit', remindersCtrl.edit);
+// PUT	/reminders/:id	remindersCtrl.update (update action)
+router.put('/:id', remindersCtrl.update);
 
 module.exports = router;

@@ -10,7 +10,7 @@
   <nav>
     <a href="/">HOME</a>
     <% if (user) { %>
-      <a href="/reminders/new">NEW REMINDER</a>
+      <a href="/reminders/new">SET REMINDER</a>
       <a href="/reminders">MY REMINDERS</a>
       <!-- User is logged in -->
       <a href="/logout">LOG OUT</a>
@@ -21,7 +21,7 @@
       <% } %>
     <% } else { %>
       <!-- User is not logged in -->
-      <a href="/auth/google" class="login">LOG IN <img src="https://i.imgur.com/FHjYyi0.png" style="height: 30px;"></a>
+      <a href="/auth/google" class="login">PLEASE LOG IN<img src="https://i.imgur.com/FHjYyi0.png" style="height: 30px;"></a>
     <% } %>
   </nav>
 </body>

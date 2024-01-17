@@ -4,7 +4,7 @@ const passport = require('passport');
 
 // GET home page
 router.get('/', function(req, res) {
-  res.render('home', { title: 'Welcome to Floral Reminder' });
+  res.render('home', { title: 'Welcome to RosyRemind' });
 });
 
 // Google OAuth login route

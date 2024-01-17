@@ -1,11 +1,17 @@
 <%- include('../partials/header') %>
-<h2>NEW REMINDER</h2>
+<h2>SET A REMINDER</h2>
 
 <form action="/reminders" method="POST">
+    <h3>Recipient Name:</h3>
+    <p>Who will be receiving flowers,</p>
     <input name="recipient" required>
+    <h3>Date:</h3>
+    <p>The date of the event,</p>
     <input name="date" required type="date">
+    <h3>Occasion:</h3>
+    <p>List an occasion such as: anniversay, birthday, baby, wedding, graduation, thank you, or holiday!</p>
     <input name="occasion" required>
-    <button type="submit">ADD REMINDER</button>
+    <button type="submit">SET REMINDER</button>
 </form>
 
 <%- include('../partials/footer') %>
