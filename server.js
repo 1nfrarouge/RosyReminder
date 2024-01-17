@@ -12,7 +12,7 @@ require('./config/database');
 require('./config/passport');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/');
+var remindersRouter = require('./routes/reminders');
 
 var app = express();
 
@@ -41,8 +41,10 @@ app.use(function (req, res, next) {
 
 app.use(methodOverride('_method'));
 
+const ensureLoggedIn = require('./config/ensureLoggedIn');
+
 app.use('/', indexRouter);
-app.use('/app', usersRouter);
+app.use('/reminders', ensureLoggedIn, remindersRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

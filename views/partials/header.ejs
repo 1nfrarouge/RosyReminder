@@ -10,6 +10,7 @@
   <nav>
     <a href="/">HOME</a>
     <% if (user) { %>
+      <a href="/reminders">MY REMINDERS</a>
       <!-- User is logged in -->
       <a href="/logout">LOG OUT</a>
       <span>Welcome, <%= user.name %></span>
