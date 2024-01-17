@@ -9,5 +9,7 @@ const remindersCtrl = require('../controllers/reminders');
 router.get('/', remindersCtrl.index);
 // GET /reminders/new (new action)
 router.get('/new', remindersCtrl.new);
+// POST /reminders (create action)
+router.post('/', remindersCtrl.create);
 
 module.exports = router;

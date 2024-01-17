@@ -3,7 +3,8 @@ const Reminder = require('../models/reminder');
 
 module.exports = {
     index,
-    new: newReminder
+    new: newReminder,
+    create
 };
 
 async function index(req, res) {
@@ -13,4 +14,14 @@ async function index(req, res) {
 
 function newReminder(req, res) {
     res.render('reminders/new');
+}
+
+async function create(req, res) {
+    req.body.user = req.user._id;
+    try {
+        await Reminder.create(req.body);
+    } catch (err) {
+        console.log(err);
+    }
+    res.redirect('/reminders');
 }
