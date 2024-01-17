@@ -11,5 +11,7 @@ router.get('/', remindersCtrl.index);
 router.get('/new', remindersCtrl.new);
 // POST /reminders (create action)
 router.post('/', remindersCtrl.create);
+// DELETE /reminders/:id	remindersCtrl.delete (delete action)
+router.delete('/:id', remindersCtrl.delete)
 
 module.exports = router;

@@ -3,8 +3,13 @@
 
 <% if (reminders.length) { %>
     <% reminders.forEach(function(reminder) { %>
-        <article>
-            <h4>Recipient <%= reminder.recipient %></h4>
+        <article class="reminder">
+            <h4>Recipient: <%= reminder.recipient %></h4>
+            <h4>Date: <%= reminder.date.toLocaleDateString() %></h4>
+            <h4>Occasion: <%= reminder.occasion %></h4>
+            <form action="/reminders/<%= reminder._id %>?_method=DELETE" method="POST">
+                <button type="submit">🗑️</button>
+              </form>
         </article>
     <% }) %>
 <% } else { %>
