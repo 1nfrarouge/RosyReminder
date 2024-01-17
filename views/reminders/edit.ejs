@@ -1,0 +1,17 @@
+<%- include('../partials/header') %>
+<h2>SET A REMINDER</h2>
+
+<form action="/reminders/<%= reminder._id %>?_method=PUT" method="POST">
+    <h3>Recipient Name:</h3>
+    <p>Who will be receiving flowers,</p>
+    <input name="recipient" required value="<%= reminder.recipient %>">
+    <h3>Date:</h3>
+    <p>The date of the event,</p>
+    <input name="date" required type="date" value="<%= reminder.date.toISOString().slice(0, 10) %>">
+    <h3>Occasion:</h3>
+    <p>List an occasion such as: anniversay, birthday, baby, wedding, graduation, thank you, or holiday!</p>
+    <input name="occasion" required value="<%= reminder.occasion %>">
+    <button type="submit">SAVE CHANGES</button>
+</form>
+
+<%- include('../partials/footer') %>

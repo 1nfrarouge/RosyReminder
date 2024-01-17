@@ -6,8 +6,8 @@ module.exports = {
     new: newReminder,
     create,
     delete: deleteReminder,
-    edit: editReminder,
-    update: updateReminder
+    edit,
+    update
 };
 
 async function index(req, res) {
@@ -39,13 +39,13 @@ async function deleteReminder(req, res) {
     res.redirect('/reminders');
   }
 
-  async function editReminder(req, res) {
+  async function edit(req, res) {
     const reminder = await Reminder.findOne({_id: req.params.id, user: req.user._id});
     if (!reminder) return res.redirect('/reminders');
     res.render('reminders/edit', { reminder });
   }
 
-async function updateReminder(req, res) {
+async function update(req, res) {
     try {
       const updatedReminder = await Reminder.findOneAndUpdate(
         {_id: req.params.id, user: req.user._id},

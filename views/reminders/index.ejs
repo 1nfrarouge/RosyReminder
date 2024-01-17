@@ -7,12 +7,7 @@
             <h4>Recipient: <%= reminder.recipient %></h4>
             <h4>Date: <%= reminder.date.toLocaleDateString() %></h4>
             <h4>Occasion: <%= reminder.occasion %></h4>
-            <form action="/reminders/<%= reminder._id %>?_method=PUT" method="POST">
-                <button type="submit">Save Changes</button>
-            </form>        
-            <form action="/reminders/<%= reminder._id %>?_method=PUT" method="POST">
-                <button type="submit">Update</button>
-              </form>
+            <a href="/reminders/<%= reminder._id %>/edit">EDIT</a>
             <form action="/reminders/<%= reminder._id %>?_method=DELETE" method="POST">
                 <button type="submit">🗑️</button>
               </form>
