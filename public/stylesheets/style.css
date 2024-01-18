@@ -105,22 +105,24 @@ h2 {
   text-align: right;
   max-width: 600px;
   line-height: 1.1;
-  letter-spacing: 0;
   white-space: pre-line;
   right: 7%;
-  bottom: 5%;
+  bottom: 8%;
 }
 
 /* Button Styles */
 .reminder-button {
   background-color: #ffffff;
   color: #5b5247;
-  border: 2px solid #5b5247;
+  border: 1px solid #5b5247;
+  border-radius: 25px;
   padding: 15px 30px;
   font-size: 1em;
   cursor: pointer;
   display: block;
   margin: 20px auto;
   width: 200px;
-  border-radius: 25px;
+  position: absolute;
+  right: 7%;
+  bottom: 3%;
 }
