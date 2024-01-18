@@ -3,25 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home Page</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 <body>
-  <nav>
+  <nav class="nav-bar">
     <a href="/">HOME</a>
     <% if (user) { %>
       <a href="/reminders/new">SET REMINDER</a>
       <a href="/reminders">MY REMINDERS</a>
-      <!-- User is logged in -->
+    <% } %>
+    <a href="/" class="logo">RosyRemind</a>
+    <% if (user) { %>
+      <div class="user-info">
+        <span>Welcome, <%= user.name %></span>
       <a href="/logout">LOG OUT</a>
-      <span>Welcome, <%= user.name %></span>
-      <!-- Display user's avatar if available -->
-      <% if (user.avatar) { %>
-        <img src="<%= user.avatar %>" alt="User Avatar" style="height: 30px;">
-      <% } %>
     <% } else { %>
       <!-- User is not logged in -->
-      <a href="/auth/google" class="login">PLEASE LOG IN<img src="https://i.imgur.com/FHjYyi0.png" style="height: 30px;"></a>
+      <a href="/auth/google" class="login">
+        PLEASE, LOG IN
+        <img src="/images/Google.png" alt="Google Login">
+      </a>      
     <% } %>
   </nav>
 </body>

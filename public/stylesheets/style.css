@@ -1,10 +1,68 @@
+/* FONT */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: 'Libre Baskerville', serif;
+  background: #f6f4f1;
+  background-image: url('/images/HomePageL.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-a {
+.nav-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #f6f4f1;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+}
+
+.nav-bar a, .nav-bar span {
+  margin: 0 20px;
+  text-decoration: none;
   color: #5b5247;
+  padding: 10px;
+  display: inline-block;
+}
+
+.nav-bar img {
+  height: 30px;
+  vertical-align: middle;
+}
+
+@media (max-width: 600px) {
+  .nav-bar a, .nav-bar span {
+    font-size: 0.8em;
+    margin: 10px;
+  }
+  h2 {
+    font-size: 2em;
+  }
+}
+
+.nav-bar a:hover {
+  color: #4a4439;
+}
+
+.logo {
+  font-size: 2.5em;
+  font-weight: bold;
+  text-decoration: none;
+  color: #5b5247;
+  padding: 10px;
+  display: inline-block;
+}
+
+.logo:hover {
+  color: #5b5247;
+  text-decoration: none;
 }
 
 .login {
@@ -18,8 +76,51 @@ a {
   height: 30px;
 }
 
-.reminder {
-  border: 3px solid red;
-  margin: 10px;
-  padding: 5px;
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 20px;
+}
+
+.user-info span {
+  order: 1;
+}
+
+/* Logout */
+.logout {
+  order: 2;
+  font-size: 0.9em;
+  padding: 3px 20px;
+}
+
+/* h2 */
+h2 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 3em;
+  font-style: italic;
+  font-weight: normal;
+  position: absolute;
+  color: #ffffff;
+  text-align: right;
+  max-width: 600px;
+  line-height: 1.1;
+  letter-spacing: 0;
+  white-space: pre-line;
+  right: 7%;
+  bottom: 5%;
+}
+
+/* Button Styles */
+.reminder-button {
+  background-color: #ffffff;
+  color: #5b5247;
+  border: 2px solid #5b5247;
+  padding: 15px 30px;
+  font-size: 1em;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto;
+  width: 200px;
+  border-radius: 25px;
 }
