@@ -4,6 +4,7 @@
 
 ☐ Screenshot(s):
 
+
 ☐ Technologies Used:
 HTML/CSS
 JavaScript
@@ -18,6 +19,8 @@ Planning:
 https://trello.com/b/xM0MEygb/project-2
 
 App Link:
-
+https://rosyreminder-6710877ba330.herokuapp.com/ 
 
 ☐ Next Steps:
+- ADD further styling
+- ADD a email function to send reminders
