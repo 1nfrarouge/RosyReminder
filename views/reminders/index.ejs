@@ -1,34 +1,35 @@
 <%- include('../partials/header') %>
-<div class="content-container">
-  <div class="reminders-list">
-    <h2>MY REMINDERS</h2>
-    <% if (reminders.length) { %>
-      <% reminders.forEach(function(reminder) { %>
-        <article class="reminder">
-          <h4>Recipient: <%= reminder.recipient %></h4>
-          <h4>Date: <%= reminder.date.toLocaleDateString() %></h4>
-          <h4>Occasion: <%= reminder.occasion %></h4>
-          <a href="/reminders/<%= reminder._id %>/edit" class="styled-button">EDIT</a>
-          <form action="/reminders/<%= reminder._id %>?_method=DELETE" method="POST">
-            <button type="submit" class="styled-button">DELETE</button>
-          </form>
-        </article>
-      <% }) %>
-    <% } else { %>
-      <p>No Reminders Yet!</p>
-    <% } %>
+<div class="my-reminders-container">
+  <h3 class="my-reminders-title">MY REMINDERS & UPCOMING EVENTS</h3>
+  
+  <div class="content-container">
+    <div class="reminders-list">
+      <% if (reminders.length) { %>
+        <% reminders.forEach(function(reminder) { %>
+          <article class="reminder">
+            <h4>Recipient: <%= reminder.recipient %></h4>
+            <h4>Date: <%= reminder.date.toLocaleDateString() %></h4>
+            <h4>Occasion: <%= reminder.occasion %></h4>
+            <a href="/reminders/<%= reminder._id %>/edit" class="styled-button">EDIT</a>
+            <form action="/reminders/<%= reminder._id %>?_method=DELETE" method="POST">
+              <button type="submit" class="styled-button">DELETE</button>
+            </form>
+          </article>
+        <% }) %>
+      <% } else { %>
+        <p>No Reminders Yet!</p>
+      <% } %>
+    </div>
+    <div class="events-list">
+      <ul>
+        <li>Valentine's Day - February 14</li>
+        <li>Mother's Day - May 12</li>
+        <li>Easter - March 31</li>
+        <li>Father's Day - June 16</li>
+        <li>Chinese Valentine's - August 20</li>
+      </ul>
+      <h5>Add these events to your reminders list!</h5>
+      <a href="/reminders/new" class="styled-button">SET A NEW REMINDER</a>
+    </div>
   </div>
-  <div class="events-list">
-    <h2>UPCOMING EVENTS</h2>
-    <ul>
-      <li>Valentine's Day - February 14</li>
-      <li>Mother's Day - May 12</li>
-      <li>Easter - March 31</li>
-      <li>Father's Day - June 16</li>
-      <li>Chinese Valentine's - August 20</li>
-    </ul>
-    <p>Add these events to your reminders list!</p>
-    <a href="/reminders/new" class="styled-button">SET A NEW REMINDER</a>
-  </div>
-</div>
-<%- include('../partials/footer') %>
+</div

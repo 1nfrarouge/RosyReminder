@@ -132,15 +132,7 @@ h2 {
   background-color: #ad9d81;
 }
 
-/* REMINDER PAGE */
-
-.reminder-page-body {
-  background-image: url('/images/BG.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
+/* SET REMINDER PAGE */
 .reminder-form-container {
   display: flex;
   flex-direction: column;
@@ -245,4 +237,77 @@ h2 {
   margin-bottom: 3px;
   text-align: right;
   max-width: 400px;
+}
+
+/* MY REMINDERS PAGE */
+.my-reminders-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  box-sizing: border-box;
+  position: relative;
+  margin: 5% auto;
+  max-width: 900px;
+  margin-top: 60px;
+  position: absolute;
+  top: 100px;
+  left: 10%;
+  right: 10%;
+}
+
+.my-reminders-title {
+  font-size: 2.8em;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: #5b5247;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.content-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 1em;
+}
+
+.reminders-list, .events-list {
+  flex-basis: 45%;
+  background-color: #f6f4f1;
+  padding: 2em;
+  margin: 1em;
+  border-radius: 15px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.reminder, .events-list ul {
+  background-color: #ffffff;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.styled-button {
+  background-color: #ad9d81;
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 15px;
+  text-align: center;
+  display: inline-block;
+  margin: 5px 0;
+  cursor: pointer;
+  font-size: 1em;
+  text-decoration: none;
+}
+
+.styled-button:hover {
+  background-color: #4a4439;
+  text-decoration: none;
 }
