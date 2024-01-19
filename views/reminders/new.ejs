@@ -1,17 +1,34 @@
 <%- include('../partials/header') %>
-<h2>SET A REMINDER</h2>
+<div class="reminder-form-container">
+  <h3 class="reminder-form-title">SET A REMINDER</h3>
+  <h5 class="reminder-form-subtitle">Always Remember the Moments that Matter — Set a Floral Reminder Today.</h5>
+  
+  <form action="/reminders" method="POST" class="reminder-form">
+    <div class="reminder-form-group">
+      <div class="form-left">
+        <h4 class="reminder-form-label">Recipient Name:</h4>
+        <p class="reminder-form-paragraph">Who will be receiving flowers,</p>
+      </div>
+      <input class="reminder-form-input" name="recipient" required>
+    </div>
 
-<form action="/reminders" method="POST">
-    <h3>Recipient Name:</h3>
-    <p>Who will be receiving flowers,</p>
-    <input name="recipient" required>
-    <h3>Date:</h3>
-    <p>The date of the event,</p>
-    <input name="date" required type="date">
-    <h3>Occasion:</h3>
-    <p>List an occasion such as: anniversary, birthday, baby, wedding, graduation, thank you, or holiday!</p>
-    <input name="occasion" required>
-    <button type="submit">ADD REMINDER</button>
-</form>
+    <div class="reminder-form-group">
+      <div class="form-left">
+        <h4 class="reminder-form-label">Date:</h4>
+        <p class="reminder-form-paragraph">The date of the event,</p>
+      </div>
+      <input class="reminder-form-input" name="date" required type="date">
+    </div>
 
+    <div class="reminder-form-group">
+      <div class="form-left">
+        <h4 class="reminder-form-label">Occasion:</h4>
+        <p class="reminder-form-paragraph">List an occasion such as: anniversary, birthday, baby, wedding, graduation, thank you, or holiday!</p>
+      </div>
+      <input class="reminder-form-input" name="occasion" required>
+    </div>
+
+    <button type="submit" class="reminder-form-button">ADD REMINDER</button>
+  </form>
+</div>
 <%- include('../partials/footer') %>

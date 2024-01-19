@@ -5,7 +5,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Libre Baskerville', serif;
-  background: #f6f4f1;
   background-image: url('/images/HomePageL.png');
   background-size: cover;
   background-repeat: no-repeat;
@@ -22,6 +21,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px 30px;
+  font-size: 0.9em;
 }
 
 .nav-bar a, .nav-bar span {
@@ -33,7 +33,7 @@ body {
 }
 
 .nav-bar img {
-  height: 30px;
+  height: 70px;
   vertical-align: middle;
 }
 
@@ -73,7 +73,7 @@ body {
 }
 
 .login img {
-  height: 30px;
+  height: 25px;
 }
 
 .user-info {
@@ -97,14 +97,15 @@ body {
 /* h2 */
 h2 {
   font-family: 'Libre Baskerville', serif;
-  font-size: 3em;
+  font-size: 3.3em;
   font-style: italic;
   font-weight: normal;
   position: absolute;
   color: #ffffff;
   text-align: right;
-  max-width: 600px;
-  line-height: 1.1;
+  max-width: 1000px;
+  line-height: 1;
+  letter-spacing: 5px;
   white-space: pre-line;
   right: 7%;
   bottom: 8%;
@@ -125,4 +126,123 @@ h2 {
   position: absolute;
   right: 7%;
   bottom: 3%;
+}
+
+.reminder-button:hover {
+  background-color: #ad9d81;
+}
+
+/* REMINDER PAGE */
+
+.reminder-page-body {
+  background-image: url('/images/BG.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.reminder-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  box-sizing: border-box;
+  position: absolute;
+  left: 20%;
+  right: 20%;
+  top: 20%;
+  max-width: 1400px;
+  max-height: 1200px;
+}
+
+.reminder-form-group {
+  display: flex;
+  align-items: left;
+  justify-content: flex-start;
+  gap: 30px;
+  margin-bottom: 25px;
+  max-height: 50px;
+}
+
+.form-left {
+  flex-basis: 40%;
+}
+
+.reminder-form-input {
+  background-color: #ad9d81;
+  border: 1px solid #ad9d81;
+  border-radius: 25px;
+  padding: 15px;
+  font-size: 1em;
+  color: #5b5247;
+  align-items: left;
+  width: 100%;
+}
+
+.reminder-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  
+}
+
+.reminder-form button {
+  background-color: #ad9d81;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 20px;
+  padding: 15px 15px;
+  font-size: 1.3em;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  width: 300px;
+  margin-top: 5px;
+}
+
+.reminder-form button:hover {
+  background-color: #4a4439;
+}
+
+.reminder-form-title {
+  font-size: 2.8em;
+  letter-spacing: 20px;
+  font-weight: bold;
+  color: #5b5247;
+  margin-bottom: 5px;
+}
+
+.reminder-form-subtitle {
+  font-size: 1.8em;
+  font-style: italic;
+  max-width: 750px;
+  align-items: center;
+  color: #5b5247;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.reminder-form h4 {
+  flex-direction: row;
+  font-size: 1em;
+  color: #5b5247;
+  margin-top: 1px;
+  margin-bottom: 3px;
+  text-align: right;
+  max-width: 400px;
+}
+
+.reminder-form p {
+  flex-direction: row;
+  font-size: .7em;
+  color: #5b5247;
+  margin-top: 1px;
+  margin-bottom: 3px;
+  text-align: right;
+  max-width: 400px;
 }
